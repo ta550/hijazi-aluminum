@@ -277,7 +277,7 @@ img {
 
 @media screen and (max-width:800px) {
 	.title {
-		margin-left: 40px
+		margin-left: 40px;
 	}
 }
 
@@ -294,7 +294,7 @@ img {
 
 @media screen and (max-width:420px) {
 	.title--top {
-		margin: 0 13%
+		margin: 0 13%;
 	}
 }
 
@@ -310,7 +310,7 @@ img {
 
 @media screen and (max-width:800px) {
 	.title__text {
-		font-size: 7.6rem
+		font-size: 3rem;
 	}
 }
 
@@ -398,7 +398,7 @@ img {
 
 @media screen and (max-width:800px) {
 	.title__lead {
-		font-size: 2.4rem;
+		font-size: 2rem;
 		line-height: 1.4
 	}
 }

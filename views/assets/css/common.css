@@ -188,6 +188,10 @@ body {
 	overflow-x: hidden
 }
 
+.simpleHeader {
+	top: 0 !important;
+	font-size: 2rem;
+}
 @media screen and (max-width:420px) {
 	body {
 		font-size: 1.2rem
@@ -296,6 +300,9 @@ img {
 	.title--top {
 		margin: 0 13%
 	}
+	#headerTitle {
+		font-size: 1.5 !important;
+	}
 }
 
 .title__text {
@@ -310,13 +317,13 @@ img {
 
 @media screen and (max-width:800px) {
 	.title__text {
-		font-size: 7.6rem
+		font-size: 4rem;
 	}
 }
 
 @media screen and (max-width:420px) {
 	.title__text {
-		font-size: 3.8rem;
+		font-size: 2.5rem;
 		margin-bottom: 0.8rem;
 		text-shadow: 0 3px 10px rgba(2, 11, 22, 0.5)
 	}
@@ -705,7 +712,7 @@ img {
 }
 
 .back-arrow {
-	position: fixed;
+	position: absolute;
 	top: 120px;
 	left: 40px;
 	display: block;
@@ -720,9 +727,15 @@ img {
 
 @media screen and (max-width:420px) {
 	.back-arrow {
-		width: 32px;
-		top: 60px;
+		width: 60px;
+		top: 80px;
 		left: 6.25%
+	}
+	.container img {
+		width: 90% !important;
+	}
+	.container{
+		margin: 0 auto !important;
 	}
 }
 
@@ -742,6 +755,7 @@ img {
 .page-top {
 	width: 100%;
 	height: 100vh;
+	margin-bottom: 40vh;
 	position: relative;
 	color: #fff;
 	background: #020b16
@@ -935,7 +949,7 @@ img {
 }
 
 header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -984,8 +998,8 @@ header .name {
 }
 
 @media screen and (max-width:420px) {
-	header .name {
-		font-size: 1.6rem
+	header a {
+		font-size: 2rem !important;
 	}
 }
 
