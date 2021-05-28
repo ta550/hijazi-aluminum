@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="KUON YAGI PORTFOLIO / Web designer / Markup engineer">
+    <meta property="og:image" content="https://kuon.space/assets/img/ogp.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@goldi69s">
+    <meta property="og:site_name" content="KUON YAGI PORTFOLIO">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="stylesheet" href="./assets/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="./awwwards.css">
+    <meta property="og:url" content="https://kuon.space/about.html">
+    <meta property="og:title" content="About Me | KUON YAGI PORTFOLIO">
+    <title>Composite Panel | HIJAZI ALUMINUM & GLASS</title><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115155070-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-115155070-1');</script>
+  </head>
+  <body>
+        <header style="z-index: 1;text-transform: uppercase;"><a style="font-size: 3rem;" id="headerTitle" class="name" href="./">Hijazi Aluminum &amp; Glass </a>
+
+
+        <div class="curtain"></div>
+        <div class="loader"></div>
+      </header>
+    <main id="barba-wrapper">
+      <div class="barba-container" data-namespace="underlayer">
+        <div class="page-top">
+          <div class="page-top__inner"><a class="back-arrow" href="./#compositePanel"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="34" viewBox="0 0 67 34"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" transform="translate(2 1)"><path stroke-width="2" d="M0,15.5533333 L64,15.5533333"/><polyline stroke-width="2" points="15.556 0 0 15.556 15.556 31.111"/></g></svg></a>
+            <p class="scrollDown">SCROLLDOWN</p>
+            <div class="title">
+              <h2 class="title__text">Aluminum Composite Panel</h2>
+              <div class="border js-toRight"><span></span><span></span></div>
+              <!-- <p class="title__lead">Our façade systems are used to fabricate glass façades of buildings such as banks, hotels, administration offices, office buildings, car showrooms, gyms, etc. They are also used for multiple spatial structures and roof glazing that light the interior and create a suitable atmosphere and comfort to its users. They are an excellent tool for shaping contemporary architecture and implementing designers’ bold visions. The most popular among these products are the mullion-transom systems. ALUPROF’s façade solutions include also a range of products of various design and appearance, including a bunch of individual solutions.</p> -->
+              <!-- <div class="btn-wrap"><a class="btn" href="https://www.wantedly.com/users/48483598" target="_balnk">Scout</a></div> -->
+            </div>
+             {{#if mainImage}}
+              <div class="image" style="background: url('{{mainImage.url}}') no-repeat center;background-size: cover;"></div>
+            {{else}}
+            <div class="image image--composite"></div>
+          {{/if}}
+          </div>
+        </div>
+        <section style="margin-bottom: 5rem;">
+          <div style="width: 80%; margin: 5rem auto;">
+            <h1 style="font-size: 4rem;color: black !important;font-weight: bold !important;">Aluminum Composite Panel</h1>
+          </div>
+          <div class="who" style="margin-top: 5rem;">
+              <div class="tex" style="width: 70%;margin: 0 auto;">
+                  <div class="row">
+                      <div style="width: 100%;">
+                        <h1 style="font-size: 2rem;">Our façade systems are used to fabricate glass façades of buildings such as banks, hotels, administration offices, office buildings, car showrooms, gyms, etc. They are also used for multiple spatial structures and roof glazing that light the interior and create a suitable atmosphere and comfort to its users. They are an excellent tool for shaping contemporary architecture and implementing designers’ bold visions. The most popular among these products are the mullion-transom systems. ALUPROF’s façade solutions include also a range of products of various design and appearance, including a bunch of individual solutions.</h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br>
+
+
+      <div class="container" style="margin: 0 10rem;">
+        {{#each images}}
+          <img src="{{url}}" style="width: 45%;height: 60vh;margin-bottom: 30px;margin: 20px;" />
+        {{/each}}
+      </div>
+<br  /><br />    
+    
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./assets/js/jquery.fullPage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="./assets/js/parallax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+    <script type="text/javascript" >
+          function nextPage() {
+        $('a[href="#middle"]').click();
+      }
+    </script>
+  </body>
+</html>

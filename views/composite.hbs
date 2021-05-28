@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+     
+           
+          
+    <div id="wrapper">
+         <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">&nbsp; HIJAZI ALUMINUM & GLASS</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><button class="btn logout_btn">Logout</button></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <div class="text-center user-image-back text-center mx-auto d-flex align-items-center justify-content-center">
+                    <img src="../assets/img/find_user.png" class="img-responsive mx-auto" />
+                </div>
+                <ul class="nav" id="main-menu">
+                    
+
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a href="/admin/facade" class="nav-link">Facade System Images</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/admin/composite" class="nav-link">Aluminum Composite Panel Image</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/admin/glassArt" class="nav-link">Glass Art Images</a>
+                        </li>
+                      </ul>
+                      
+                      
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>Aluminum Composite Panel</h2>   
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+
+                  
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">Main Image</a></li>
+                            <li><a data-toggle="tab" href="#menu1">Inner Images</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                {{#if compositeMainImage}} 
+                                    <form method="POST" action="/composite/main/upload" enctype="multipart/form-data">
+                                    <br />
+                                        <img class="img-fluid" onclick="$('#composite').trigger('click')" name="compositeMainImage" src="{{compositeMainImage.url}}" style="width: 40vh;height: 40vh;" />
+                                        <br /><br />
+                                        <input class="form-control d-none" id="compositeMainImage" accept="image/*" type="file" name="compositeMainImage" required="required" />
+                                        <br />
+                                        <button type="submit" class="btn btn-primary" >Upload Image</button>
+                                    </form>
+                                {{else}}
+                                    <form method="POST" action="/composite/main/upload" enctype="multipart/form-data">
+                                        <br /><br>
+                                        Upload Images<input type="file" accept="image/*" class="form-control" id="compositeMainImage" name="compositeMainImage" value="Upload composite Main Image" required />
+                                        <br /><br /> 
+                                        <button type="submit" class="btn btn-primary" >Upload Image</button>
+                                    </form>
+                                {{/if}}
+                            </div>
+                            <div id="menu1" class="tab-pane fade" style="overflow; scroll; ">
+                                <form method="POST" action="/composite/upload" enctype="multipart/form-data">
+                                        <br /><br>
+                                        Upload Images<input type="file" accept="image/*" class="form-control" id="compositeMainImage" name="compositeMainImage" value="Upload composite Main Image" required multiple />
+                                        <br /><br /> 
+                                        <button type="submit" class="btn btn-primary" >Upload Image</button>
+                                    </form>
+                                    <br />
+                                    {{!-- <div style="display: flex"> --}}
+                                    {{#each compositeInnerImages}}
+                                        {{!-- <div style="margin-bottom: 50px;">
+                                            <img src="{{url}}" alt="Not Found" style="width: 100%;height: 30vh;" />
+                                            <button type="submit" style="display: block" class="btn btn-primary">Remove Image</button>
+                                        </div> --}}
+                                        <div class="gallery">
+                                            <a target="_blank" href="{{url}}">
+                                                <img src="{{url}}" alt="Cinque Terre" width="600" height="400">
+                                            </a>
+                                            <div onclick="window.location.href= 'composite/delete/{{public_id}}'" class="desc">Remove Image</div>
+                                        </div>
+                                        {{!-- <br /> --}}
+                                    {{/each}}
+                                    {{!-- </div> --}}
+                            </div>
+                        </div>
+
+              
+                 <!-- /. ROW  -->           
+            </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+
+        
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+        </div>
+
+
+
+
+
+
+
+
+
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../assets/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="../assets/js/custom.js"></script>
+    
+   
+</body>
+</html>
